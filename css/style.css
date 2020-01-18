@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background: black;
+    color: white;
+    padding: 1em;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    background: blue;
+    color: white;
+    padding: 1em;
+    height: 30vh;
+
+}
+.hero h1{
+    font-size: 5em;
+    flex: 300px;
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 85%;
+    margin: auto;
+    grid-gap: 1em;
+    padding: 1em;
+
+}
+.g-item img{
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 960px){
+  main{
+      display: grid;
+       grid-template-areas: 'side main main main';
+  }
+
+  .hero{
+    
+        height: auto;
+          flex-direction: column;
+    }
+    .hero h1{
+        flex: 0;
+        font-size: 2em;
+        margin-bottom: 1em;
+    
+    }
+  .hero p{
+    text-align: justify;
+
+    }
+    .grid{
+        margin: 0;
+         grid-template-columns: repeat(2, 1fr);
+         
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    /*new CSS*/
+     main{
+    display: grid;
+    grid-template-areas: 'main'
+                            'side';
+  }
+    .hero{
+    
+        height: auto;
+          flex-direction: column;
+          grid-area:side;
+
+    }
+    .hero h1{
+        flex: 0;
+        font-size: 2em;
+        margin-bottom: 1em;
+    
+    }
+  .hero p{
+    text-align: justify;
+
+    }
+    .grid{
+        width: 100%;
+        grid-template-columns: 1em;
+    }
+
+  
+   
+}
